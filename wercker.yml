@@ -1,0 +1,17 @@
+# Copyright 2018, Oracle Corporation and/or affiliates.  All rights reserved.
+
+# This is a sample that demonstrates how to use the SpotBugs 
+# Wercker step. 
+#
+
+box: 
+  id: store/oracle/serverjre
+  username: $DOCKER_USERNAME
+  password: $DOCKER_PASSWORD
+  tag: 8
+
+publish:
+  steps:
+    - internal/publish-step:
+        auth_token: ef9fa55b33dcdff1fb8438e203b9b07870887e16b6deff908019cd1eaa0e342a
+        owner: wercker
