@@ -21,7 +21,7 @@ regular-test:
 ```
 
 
-After the SpotBugs step has completed, you will see the result in your output file specified.
+After the SpotBugs step has completed, you will see the result in output file specified in output parameter.
 
 Parameters:
 All parameters are required unless otherwise specified.
