@@ -3,7 +3,7 @@
 
 # check that all of the required parameters were provided
 # note that wercker does not enforce this for us, so we have to check
-if [[ -z "$WERCKER_SPOTBUGS_STEP_FORMAT" || -z "$WERCKER_SPOTBUGS_STEP_OUTPUT" || -z "$WERCKER_SPOTBUGS_STEP_CLASSPATH" ]]; then
+if [[ -z "$WERCKER_SPOTBUGS_FORMAT" || -z "$WERCKER_SPOTBUGS_OUTPUT" || -z "$WERCKER_SPOTBUGS_CLASSPATH" ]]; then
   fail "$(date +%H:%M:%S): All required parameters: format, output and target MUST be specified"
 fi
 
@@ -75,22 +75,22 @@ export PATH=$PATH:/spotbugs/bin
 # Get ready to start the SpotBugs
 #
 
-if [[ -z "$WERCKER_SPOTBUGS_STEP_FORMAT" ]]; then
+if [[ -z "$WERCKER_SPOTBUGS_FORMAT" ]]; then
   FORMAT=""
 else
-  FORMAT="$WERCKER_SPOTBUGS_STEP_FORMAT"
+  FORMAT="$WERCKER_SPOTBUGS_FORMAT"
 fi
 
-if [[ -z "$WERCKER_SPOTBUGS_STEP_OUTPUT" ]]; then
+if [[ -z "$WERCKER_SPOTBUGS_OUTPUT" ]]; then
   OUTPUT=""
 else
-  OUTPUT="-output $WERCKER_SPOTBUGS_STEP_OUTPUT"
+  OUTPUT="-output $WERCKER_SPOTBUGS_OUTPUT"
 fi
 
-if [[ -z "$WERCKER_SPOTBUGS_STEP_CLASSPATH" ]]; then
+if [[ -z "$WERCKER_SPOTBUGS_CLASSPATH" ]]; then
   CLASSPATH="."
 else
-  CLASSPATH="$WERCKER_SPOTBUGS_STEP_CLASSPATH"
+  CLASSPATH="$WERCKER_SPOTBUGS_CLASSPATH"
 fi
 
 #

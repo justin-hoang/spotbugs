@@ -1,4 +1,5 @@
-name: spotbugs-step
+# Copyright 2018, Oracle Corporation and/or affiliates.  All rights reserved.
+name: spotbugs
 version: 3.1.1
 keywords:
   - spotbugs

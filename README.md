@@ -14,7 +14,7 @@ To use this step, include it in your wercker.yml pipeline, for example:
 ```
 regular-test:
   steps:
-    - justin-hoang/spotbugs-step:
+    - justin-hoang/spotbugs:
       format: -xml
       output: ./result.log
       classpath: target/classes
